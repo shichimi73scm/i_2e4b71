@@ -58,29 +58,29 @@ font-size: 20px;
 <!--//////////-->
 <!--ループ対応-->
   メロディ<br>
-<audio loop src="melody\city-memoria.mp3" type="audio/mpeg" id="city-memoria"></audio>
-<button id="btn_play_city-memoria" class="btn_on_city-memoria"><font color="#fff">ON</font></button><br>
-<button id="btn_stop_city-memoria" class="btn_off_city-memoria"><font color="#fff">OFF</font></button><br><br>
+<audio loop src="melody\city-memoria.mp3" type="audio/mpeg" id="city"></audio>
+<button id="btn_play_city" class="btn_on_city"><font color="#fff">ON</font></button><br>
+<button id="btn_stop_city" class="btn_off_city"><font color="#fff">OFF</font></button><br><br>
 <script>
 window.addEventListener('DOMContentLoaded', function(){
 
-  const btn_play_city-memoria = document.getElementById("btn_play_city-memoria");
-  const btn_stop_city-memoria = document.getElementById("btn_stop_city-memoria");
+  const btn_play_city = document.getElementById("btn_play_city");
+  const btn_stop_city = document.getElementById("btn_stop_city");
 
-  btn_play_city-memoria.addEventListener("click", e => {
-    city-memoria.play();
+  btn_play_city.addEventListener("click", e => {
+    city.play();
   });
 
-  btn_stop_city-memoria.addEventListener("click", e => {
-    city-memoria.pause();
-    city-memoria.currentTime = 0;
+  btn_stop_city.addEventListener("click", e => {
+    city.pause();
+    city.currentTime = 0;
   });
 
 });
 </script>
 
 <style>
-.btn_on_city-memoria{
+.btn_on_city{
     width: 80px;
     padding: 10px;
     box-sizing: border-box;
@@ -89,7 +89,7 @@ window.addEventListener('DOMContentLoaded', function(){
     cursor: pointer;
 font-size: 20px;
 }
-.btn_off_city-memoria{
+.btn_off_city{
     width: 80px;
     padding: 10px;
     box-sizing: border-box;
@@ -112,6 +112,7 @@ font-size: 20px;
 i_2e4b71</p>
 </body>
 </html>
+
 
 
 
