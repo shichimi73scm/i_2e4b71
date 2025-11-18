@@ -23,6 +23,38 @@ styleタグ内.btn_x
 <p>ONで再生、OFFで再生終了</p>
 
 <!--//////////-->
+<!--ループ非対応-->
+<audio src="announce\shiki_lasttrain.mp3" type="audio/mpeg" id="shiki_lasttrain"></audio>
+<button id="btn_play" class="btn_on"><font color="#fff">ON</font></button><br>
+<script>
+window.addEventListener('DOMContentLoaded', function(){
+
+  const btn_play = document.getElementById("btn_play");
+
+  btn_play.addEventListener("click", e => {
+    Melody_A.play();
+  });
+
+});
+</script>
+
+<style>
+.btn_on{
+    width: 80px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    background: #b7282e;
+    cursor: pointer;
+font-size: 20px;
+}
+
+
+</style>
+<br><br>
+<!--==========-->
+  
+<!--//////////-->
 <!--ループ対応-->
 <audio loop src="melody\city-memoria.mp3" type="audio/mpeg" id="Melody_A"></audio>
 <button id="btn_play" class="btn_on"><font color="#fff">ON</font></button><br>
@@ -78,4 +110,5 @@ font-size: 20px;
 i_2e4b71</p>
 </body>
 </html>
+
 
