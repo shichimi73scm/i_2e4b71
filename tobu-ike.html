@@ -26,13 +26,13 @@ styleタグ内.btn_x
 <!--ループ非対応-->
   発車案内<br>
 <audio src="announce\shiki_lasttrain.mp3" type="audio/mpeg" id="shiki_lasttrain"></audio>
-<button id="btn_play" class="btn_on"><font color="#fff">ON</font></button><br>
+<button id="btn_play_shiki_lasttrain" class="btn_on_shiki_lasttrain"><font color="#fff">ON</font></button><br>
 <script>
 window.addEventListener('DOMContentLoaded', function(){
 
-  const btn_play = document.getElementById("btn_play");
+  const btn_play_shiki_lasttrain = document.getElementById("btn_play_shiki_lasttrain");
 
-  btn_play.addEventListener("click", e => {
+  btn_play_shiki_lasttrain.addEventListener("click", e => {
     shiki_lasttrain.play();
   });
 
@@ -40,7 +40,7 @@ window.addEventListener('DOMContentLoaded', function(){
 </script>
 
 <style>
-.btn_on{
+.btn_on_shiki_lasttrain{
     width: 80px;
     padding: 10px;
     box-sizing: border-box;
@@ -58,29 +58,29 @@ font-size: 20px;
 <!--//////////-->
 <!--ループ対応-->
   メロディ<br>
-<audio loop src="melody\city-memoria.mp3" type="audio/mpeg" id="Melody_A"></audio>
-<button id="btn_play" class="btn_on"><font color="#fff">ON</font></button><br>
-<button id="btn_stop" class="btn_off"><font color="#fff">OFF</font></button><br><br>
+<audio loop src="melody\city-memoria.mp3" type="audio/mpeg" id="city-memoria"></audio>
+<button id="btn_play_city-memoria" class="btn_on_city-memoria"><font color="#fff">ON</font></button><br>
+<button id="btn_stop_city-memoria" class="btn_off_city-memoria"><font color="#fff">OFF</font></button><br><br>
 <script>
 window.addEventListener('DOMContentLoaded', function(){
 
-  const btn_play = document.getElementById("btn_play");
-  const btn_stop = document.getElementById("btn_stop");
+  const btn_play_city-memoria = document.getElementById("btn_play_city-memoria");
+  const btn_stop_city-memoria = document.getElementById("btn_stop_city-memoria");
 
-  btn_play.addEventListener("click", e => {
-    Melody_A.play();
+  btn_play_city-memoria.addEventListener("click", e => {
+    city-memoria.play();
   });
 
-  btn_stop.addEventListener("click", e => {
-    Melody_A.pause();
-    Melody_A.currentTime = 0;
+  btn_stop_city-memoria.addEventListener("click", e => {
+    city-memoria.pause();
+    city-memoria.currentTime = 0;
   });
 
 });
 </script>
 
 <style>
-.btn_on{
+.btn_on_city-memoria{
     width: 80px;
     padding: 10px;
     box-sizing: border-box;
@@ -89,7 +89,7 @@ window.addEventListener('DOMContentLoaded', function(){
     cursor: pointer;
 font-size: 20px;
 }
-.btn_off{
+.btn_off_city-memoria{
     width: 80px;
     padding: 10px;
     box-sizing: border-box;
@@ -112,6 +112,7 @@ font-size: 20px;
 i_2e4b71</p>
 </body>
 </html>
+
 
 
 
